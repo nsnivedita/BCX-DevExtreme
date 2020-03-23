@@ -1,0 +1,76 @@
+<dx-validation-group id="form">
+  <div class="login-header">
+    <div class="title">{{ appInfo.title }}</div>
+    <div>Create an account</div>
+  </div>
+  <div class="dx-field">
+    <dx-text-box [(value)]="fname" placeholder="First Name" width="100%">
+      <dx-validator>
+        <dxi-validation-rule
+          type="required"
+          message="First name is required"
+        ></dxi-validation-rule>
+      </dx-validator>
+    </dx-text-box>
+  </div>
+  <div class="dx-field">
+    <dx-text-box [(value)]="lname" placeholder="Last Name" width="100%">
+      <dx-validator>
+        <dxi-validation-rule
+          type="required"
+          message="Last name is required"
+        ></dxi-validation-rule>
+      </dx-validator>
+    </dx-text-box>
+  </div>
+  <div class="dx-field">
+    <dx-text-box [(value)]="email" placeholder="Email Id" width="100%">
+      <dx-validator>
+        <dxi-validation-rule
+          type="required"
+          message="Email Id is required"
+        ></dxi-validation-rule>
+      </dx-validator>
+    </dx-text-box>
+  </div>
+  <div class="dx-field">
+    <dx-text-box
+      mode="password"
+      [(value)]="password"
+      placeholder="Password"
+      width="100%"
+    >
+      <dx-validator>
+        <dxi-validation-rule
+          type="required"
+          message="Password is required"
+        ></dxi-validation-rule>
+      </dx-validator>
+    </dx-text-box>
+  </div>
+  <div class="dx-field">
+    <dx-text-box
+      mode="password"
+      [(value)]="cpassword"
+      placeholder=" Confirm Password"
+      width="100%"
+    >
+      <dx-validator>
+        <dxi-validation-rule
+          type="required"
+          message="Password is required"
+        ></dxi-validation-rule>
+       
+      </dx-validator>
+    </dx-text-box>
+  </div>
+
+  <div class="dx-field">
+    <dx-button
+      type="default"
+      text="Register"
+      (onClick)="onRegClick($event)"
+      width="100%"
+    ></dx-button>
+  </div>
+</dx-validation-group>
